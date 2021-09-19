@@ -4,7 +4,7 @@
 19th September, 2021
 
 ### Project Title
-Replace the Project Title
+Post Python script on Github
 
 ### Description
 Describe what your project is about and what it does
