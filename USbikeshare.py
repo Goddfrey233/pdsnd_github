@@ -35,7 +35,7 @@ def obtain_filters():
 
     # obtain the day_filter input#
     print()
-    day = input('Please enter the day for your analysis from monday to sunday or "all" to apply no filter: ' )
+    day = input('What day of week would you like to see  or enter "all" to apply no filter: ' )
     day = day.casefold()
     while day not in weekdays:
         day = input('Sorry! name of day not found. Please try again!: ')
