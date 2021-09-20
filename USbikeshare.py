@@ -6,7 +6,7 @@ CITY_DATA = { 'chicago': 'chicago.csv', 'new york city': 'new_york_city.csv',
                 'washington': 'washington.csv'}
 months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 weekdays = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-
+# include a heading with spin
 class text():
     def spin(self, string, num):
         self.clear = "\b"*(8 + len(string))
