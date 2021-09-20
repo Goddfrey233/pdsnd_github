@@ -10,13 +10,13 @@ def obtain_filters():
     """ Ask the user to specify the city, month and day of which
     they seek statistics about
     Returns:
-    (str) city - name of the city to analyze
-    (str) month - the name of month to filter by or with no filter with option
+    (str) city - input name of the city to analyze
+    (str) month - input name of month to filter by or with no filter with option
                     "all"
-    (str) day - name of the day of the week to filter by or with no filter
+    (str) day - input name of the day of the week to filter by or with no filter
                 with option "all" """
     print()
-    print('Hello Welcome to USbikeshare data Python prompt\nLet\'s explore the data to gain some insight' )
+    print('Hello! we\'re glad you are here to explore USbikeshare data Python prompt\nLet\'s explore the data to gain some insight' )
 
     # obtain the city_filter input#
     print()
