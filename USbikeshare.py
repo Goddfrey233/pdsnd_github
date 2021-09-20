@@ -1,10 +1,26 @@
 import pandas as pd
 import time
 import numpy as np
+import json
 CITY_DATA = { 'chicago': 'chicago.csv', 'new york city': 'new_york_city.csv',
                 'washington': 'washington.csv'}
 months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 weekdays = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+
+class text():
+    def spin(self, string, num):
+        self.clear = "\b"*(8 + len(string))
+        for _ in range(num):
+            for ch in '-\\|/':
+                print('__' + '(' + ch + ')' + string + '(' + ch +
+                      ')' + '_', end='', flush=True)
+                time.sleep(0.1)
+                print(self.clear, end='', flush=True)
+
+
+def print_spin(message, num):
+    fido = text()
+    fido.spin(message, num)
 
 def obtain_filters():
     """ Ask the user to specify the city, month and day of which
@@ -15,6 +31,10 @@ def obtain_filters():
                     "all"
     (str) day - input name of the day of the week to filter by or with no filter
                 with option "all" """
+
+    print('\n')
+    print_spin('USbikeshare', 8)
+    print('_(/)USbikeshare(/)______________________________')
     print()
     print('Hello! we\'re glad you are here to explore USbikeshare data Python prompt\nLet\'s explore the data to gain some insight' )
 
@@ -166,7 +186,7 @@ def station_stats(df):
     # TO DO: display most frequent combination of start station and end station trip
     if 'Start Station' in df.columns and 'End Station' in df.columns:
         # -------------------START--------------------------
-        df['frequent_path'] = df['Start Station'] + ' to ' + df['End Station']
+        df['frequent_path'] ="{} to {}".format(df['Start Station'], df['End Station'])
         print('Most frequent path is from: ', df['frequent_path'].mode()[0])
 
         print('\nThis took %s seconds.' % (time.time() - start_time))
